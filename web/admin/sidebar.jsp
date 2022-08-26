@@ -39,15 +39,55 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/template/adminlte/index.html" class="nav-link">
+                            <a href="/admin/category/index.jsp" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Thể loại</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/template/adminlte/index2.html" class="nav-link">
+                            <a href="/admin/perfume/index.jsp" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Nước hoa</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-th-large"></i>
+                        <p>
+                            Quản lý đơn hàng
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/order/index.jsp" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Đơn hàng</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/slider/index.jsp" class="nav-link">
+                        <i class="nav-icon fas fa-images"></i>
+                        <p>Slider</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-th-large"></i>
+                        <p>
+                            Quản lý tài khoản
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/account/index.jsp" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Tài khoản</p>
                             </a>
                         </li>
                     </ul>

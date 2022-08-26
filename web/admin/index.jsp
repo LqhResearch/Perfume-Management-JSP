@@ -1,0 +1,1 @@
+<% response.sendRedirect("/admin/perfume/index.jsp");%>
