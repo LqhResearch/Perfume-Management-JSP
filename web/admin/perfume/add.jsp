@@ -3,7 +3,6 @@
 <jsp:directive.include file="/admin/sidebar.jsp"></jsp:directive.include>
 <%
     HashMap<String, String> formData = new HashMap<String, String>();
-
     String localPath = Helper.PRODUCT_UPLOAD;
 
     if (request.getContentType() != null && request.getContentType().indexOf("multipart/form-data") >= 0) {

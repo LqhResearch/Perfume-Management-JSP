@@ -33,7 +33,7 @@
                                     <td>${row.DonHangID}</td>
                                     <td>${Helper.Currency(row.ThanhToan)}</td>
                                     <td>${row.NgayTT}</td>
-                                    <td>${Helper.Span(row.TrangThai == 1, "Thanh toán", "Chưa thanh toán")}</td>
+                                    <td>${Helper.Span(row.DaThanhToan == 1, "Thanh toán", "Chưa thanh toán")}</td>
                                     <td><a href="/client/order/bill.jsp?id=${row.DonHangID}"><i class="fa fa-eye"></i>Xem chi tiết</a></td>
                                 </tr>
                             </c:forEach>

@@ -1,6 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:directive.include file="/client/header.jsp"></jsp:directive.include>
-
 <sql:query dataSource = "${db}" var = "list">select * from the_loai, nuoc_hoa where the_loai.MaTL = nuoc_hoa.MaTL order by MaNH desc limit 2;</sql:query>
     <!-- Slider AREA -->
     <div class="slider-area">

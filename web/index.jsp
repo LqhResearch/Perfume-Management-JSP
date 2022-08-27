@@ -1,1 +1,1 @@
-<% response.sendRedirect("/client/");%>
+<% response.sendRedirect("/client/index.jsp");%>
