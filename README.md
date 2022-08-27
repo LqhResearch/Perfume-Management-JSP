@@ -24,6 +24,6 @@
 
 ## :framed_picture: Giao diện
 - Giao diện người dùng
-![Giao diện người dùng](/web/assets/img/github/home.png)
+![Giao diện người dùng](/web/assets/github/home.png)
 - Quản trị viên
-![Quản trị viên](/web/assets/img/github/admin.png)
+![Quản trị viên](/web/assets/github/admin.png)
