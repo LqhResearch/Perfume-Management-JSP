@@ -1,6 +1,5 @@
 <%@ page contentType = "text/html" pageEncoding = "UTF-8"%>
 <jsp:directive.include file="/client/header.jsp"></jsp:directive.include>
-
 <%
     // Get username
     username = request.getSession().getAttribute("username");
@@ -11,7 +10,6 @@
         orderID += String.valueOf(rd.nextInt(10));
     }
 %>
-
 <sql:query dataSource = "${db}" var = "totalMoney">select IFNULL(SUM(Gia * SoLuong), 0) as money from gio_hang, nuoc_hoa where gio_hang.MaNH = nuoc_hoa.MaNH and gio_hang.TenDN = '<%=username%>'</sql:query>
 <sql:query dataSource = "${db}" var = "cartList">select * from gio_hang where TenDN = '<%=username%>';</sql:query>
 
@@ -32,6 +30,6 @@
     delete from gio_hang where TenDN = '<%=username%>'
 </sql:update>
 
-<% response.sendRedirect("/client/index.jsp");%>
+<% response.sendRedirect("/client/order/index.jsp");%>
 
 <jsp:directive.include file="/client/footer.jsp"></jsp:directive.include>

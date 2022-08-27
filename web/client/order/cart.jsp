@@ -1,6 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:directive.include file="/client/header.jsp"></jsp:directive.include>
-
 <%
     String sql = "";
     if (request.getParameter("action") != null && request.getParameter("action").equals("add")) {
@@ -22,12 +21,11 @@
         response.sendRedirect("cart.jsp");
     }
 %>
-
 <div class="breadcurb-area">
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Mua hàng</a></li>
+            <li><a href="/client/index.jsp">Trang chủ</a></li>
+            <li><a href="/client/perfume/filter.jsp">Mua hàng</a></li>
             <li>Giỏ hàng của tôi</li>
         </ul>
     </div>

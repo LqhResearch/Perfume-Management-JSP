@@ -53,7 +53,7 @@
                 <div class="col-md-9 col-sm-8">
                     <div class="product-items-area">
                         <div class="product-items">
-                            <h2 class="product-header">Nước hoa</h2>
+                            <h2 class="product-header">Tất cả nước hoa</h2>
                             <div class="row">
                                 <div id="product-slider" class="owl-carousel">
                                 <c:forEach var = "row" items = "${list.rows}">

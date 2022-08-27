@@ -1,7 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:directive.include file="/admin/header.jsp"></jsp:directive.include>
 <jsp:directive.include file="/admin/sidebar.jsp"></jsp:directive.include>
-
     <div class="content-wrapper">
         <section class="content-header">
             <div class="container-fluid">
@@ -13,14 +12,9 @@
                 </ol>
             </div>
         </section>
-
+        F
         <section class="content">
-            <div class="container-fluid">
-                <a href="/admin/perfume/add.jsp" class="btn btn-success"><i class="fas fa-plus"></i> Thêm</a>
-            </div>
-
         <sql:query dataSource = "${db}" var = "list">select * from don_hang order by NgayTT desc;</sql:query>
-
             <div class="container-fluid my-3">
                 <div class="card">
                     <div class="card-body">

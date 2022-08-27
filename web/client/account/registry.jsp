@@ -1,6 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:directive.include file="/dbconnect.jsp"></jsp:directive.include>
-
 <%
     String sql = "";
     if (request.getParameter("submit") != null) {
@@ -21,7 +20,6 @@
         response.sendRedirect("/client/account/login.jsp");
     }
 %>
-
 <!DOCTYPE html>
 <html>
     <head>

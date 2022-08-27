@@ -1,8 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:directive.include file="/dbconnect.jsp"></jsp:directive.include>
-
 <% String orderID = request.getParameter("id");%>
-
 <!DOCTYPE html>
 <html>
     <head>

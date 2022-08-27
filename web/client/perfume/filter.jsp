@@ -1,6 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:directive.include file="/client/header.jsp"></jsp:directive.include>
-
 <%
     String subFilter = "";
     if (request.getParameter("category-id") != null) {
@@ -9,7 +8,6 @@
         subFilter = " and TenNH like '%" + request.getParameter("search") + "%'";
     }
 %>
-
 <div class="breadcurb-area">
     <div class="container">
         <ul class="breadcrumb">

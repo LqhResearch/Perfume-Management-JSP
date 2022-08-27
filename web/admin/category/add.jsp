@@ -1,7 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:directive.include file="/admin/header.jsp"></jsp:directive.include>
 <jsp:directive.include file="/admin/sidebar.jsp"></jsp:directive.include>
-
 <%
     String sql = "";
     if (request.getParameter("action") != null) {
@@ -16,7 +15,6 @@
         response.sendRedirect("index.jsp");
     }
 %>
-
 <div class="content-wrapper">
     <section class="content-header">
         <div class="container-fluid">

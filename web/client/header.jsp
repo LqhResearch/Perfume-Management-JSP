@@ -1,8 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:directive.include file="/dbconnect.jsp"></jsp:directive.include>
-
 <% Object username = request.getSession().getAttribute("username");%>
-
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -143,6 +141,9 @@
                                                 </c:forEach>
                                         </ul>
                                     </li>
+                                    <% if (username != null) { %>
+                                    <li><a href="/client/order/index.jsp">Đơn hàng của tôi</a></li>
+                                        <% }%>
                                 </ul>
                             </nav>
                         </div>
