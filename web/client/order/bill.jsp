@@ -29,7 +29,7 @@
                         </tr>
                         <tr>
                             <td><b>Ngày đặt hàng</b></td>
-                            <td>${Helper.Date(list.getRows()[0].NgayTT)}</td>
+                            <td>${Helper.DateTime(list.getRows()[0].NgayTT)}</td>
                         </tr>
                     </tbody>
                 </table>

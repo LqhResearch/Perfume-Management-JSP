@@ -77,7 +77,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label>Giá</label>
-                        <input type="text" class="form-control" name="price" value="${list.getRows()[0].Gia}">
+                        <input type="number" class="form-control" name="price" value="${list.getRows()[0].Gia}">
                     </div>
                     <div class="form-group col-md-6">
                         <label>Hình ảnh</label>

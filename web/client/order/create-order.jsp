@@ -3,8 +3,7 @@
 
 <%
     // Get username
-    Object username = request.getSession().getAttribute("username");
-    out.print(username);
+    username = request.getSession().getAttribute("username");
     // Create orderID by random integer
     Random rd = new Random();
     String orderID = "PS";
@@ -18,7 +17,7 @@
 
     <!--Create new order-->
 <sql:update dataSource = "${db}" var = "nonQuery">
-    insert into don_hang values ('<%=orderID%>', '<%=username%>', ${totalMoney.getRows()[0].money}, '${totalMoney.getRows()[0].money}', now())
+    insert into don_hang values ('<%=orderID%>', '<%=username%>', ${totalMoney.getRows()[0].money}, ${totalMoney.getRows()[0].money}, now(), 0)
 </sql:update>
 
 <!--Create order details-->
@@ -34,3 +33,5 @@
 </sql:update>
 
 <% response.sendRedirect("/client/index.jsp");%>
+
+<jsp:directive.include file="/client/footer.jsp"></jsp:directive.include>

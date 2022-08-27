@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <% Object fullname = request.getSession().getAttribute("fullname");%>
     <a href="/admin/" class="brand-link">
         <img width="100%" src="/assets/img/logo.png" alt="Logo">
     </a>
@@ -11,7 +12,7 @@
                 <img src="/assets/img/admin.png" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Quản trị viên</a>
+                <a href="#" class="d-block"><%=fullname%></a>
             </div>
         </div>
 

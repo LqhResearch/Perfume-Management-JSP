@@ -16,11 +16,11 @@
                                     <a href="#"><img src="${row.HinhAnh}" alt="product"></a>
                                     <div class="slider-product-button">
                                         <% if (username != null) {%>
-                                        <p class="add-chart"><a href="/client/cart.jsp?action=add&id=${row.MaNH}">Thêm vào giỏ</a></p>
+                                        <p class="add-chart"><a href="/client/order/cart.jsp?action=add&id=${row.MaNH}">Thêm vào giỏ</a></p>
                                         <% }%>
                                     </div>
                                 </div>
-                                <p class="view-details"><a href="#">Xem chi tiết</a></p>
+                                <p class="view-details"><a href="/client/perfume/detail.jsp?id=${row.MaNH}">Xem chi tiết</a></p>
                             </div>
                         </c:forEach>
                     </div>
@@ -66,13 +66,13 @@
                                                 <div class="single-product-action">
                                                     <a href="/client/perfume/detail.jsp?id=${row.MaNH} "><i class="fa fa-external-link"></i></a>
                                                         <% if (username != null) {%>
-                                                    <a href="/client/cart.jsp?action=add&id=${row.MaNH}"><i class="fa fa-shopping-cart"></i></a>
+                                                    <a href="/client/order/cart.jsp?action=add&id=${row.MaNH}"><i class="fa fa-shopping-cart"></i></a>
                                                         <% } %>
                                                 </div>
                                             </div>
                                             <div class="single-product-content">
                                                 <div class="product-content-left">
-                                                    <h2><a href="#">${row.TenNH}</a></h2>
+                                                    <h2><a href="/client/perfume/detail.jsp?id=${row.MaNH}">${row.TenNH}</a></h2>
                                                     <p>${row.TenTL}</p>
                                                 </div>
                                                 <div class="product-content-right">
@@ -102,13 +102,13 @@
                                                 <div class="single-product-action">
                                                     <a href="/client/perfume/detail.jsp?id=${row.MaNH}"><i class="fa fa-external-link"></i></a>
                                                         <% if (username != null) {%>
-                                                    <a href="/client/cart.jsp?action=add&id=${row.MaNH}"><i class="fa fa-shopping-cart"></i></a>
+                                                    <a href="/client/order/cart.jsp?action=add&id=${row.MaNH}"><i class="fa fa-shopping-cart"></i></a>
                                                         <% } %>
                                                 </div>
                                             </div>
                                             <div class="single-product-content">
                                                 <div class="product-content-left">
-                                                    <h2><a href="#">${row.TenNH}</a></h2>
+                                                    <h2><a href="/client/perfume/detail.jsp?id=${row.MaNH}">${row.TenNH}</a></h2>
                                                     <p>${row.TenTL}</p>
                                                 </div>
                                                 <div class="product-content-right">
@@ -120,10 +120,6 @@
                                 </c:forEach>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="arrivals-area single-add">
-                        <a href="#"> <img src="/template/home/img/banner/arrivals.jpg" alt="arrivals"> </a>
                     </div>
 
                     <sql:query dataSource = "${db}" var = "list">select * from the_loai, nuoc_hoa where the_loai.MaTL = nuoc_hoa.MaTL and the_loai.MaTL = 2;</sql:query>
@@ -142,13 +138,13 @@
                                                 <div class="single-product-action">
                                                     <a href="/client/perfume/detail.jsp?id=${row.MaNH}"><i class="fa fa-external-link"></i></a>
                                                         <% if (username != null) {%>
-                                                    <a href="/client/cart.jsp?action=add&id=${row.MaNH}"><i class="fa fa-shopping-cart"></i></a>
+                                                    <a href="/client/order/cart.jsp?action=add&id=${row.MaNH}"><i class="fa fa-shopping-cart"></i></a>
                                                         <% }%>
                                                 </div>
                                             </div>
                                             <div class="single-product-content">
                                                 <div class="product-content-left">
-                                                    <h2><a href="#">${row.TenNH}</a></h2>
+                                                    <h2><a href="/client/perfume/detail.jsp?id=${row.MaNH}">${row.TenNH}</a></h2>
                                                     <p>${row.TenTL}</p>
                                                 </div>
                                                 <div class="product-content-right">

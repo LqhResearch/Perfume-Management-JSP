@@ -65,9 +65,13 @@
                                     <li><a href="/admin/"><i class="fa fa-user"></i>Quản trị</a></li>
                                         <% }%>
                                     <li><a href="#"><i class="fa fa-user"></i>Tài khoản của tôi</a></li>
-                                    <li><a href="checkout.html"><i class="fa fa-check-square-o"></i>Thanh toán</a></li>
-                                    <li><a href="/client/login.jsp"><i class="fa fa-lock"></i>Đăng nhập</a></li>
-                                    <li><a href="#"><i class="fa fa-pencil-square-o"></i>Đăng ký</a></li>
+                                    <li><a href="#"><i class="fa fa-check-square-o"></i>Thanh toán</a></li>
+                                        <% if (username == null) { %>
+                                    <li><a href="/client/account/login.jsp"><i class="fa fa-lock"></i>Đăng nhập</a></li>
+                                    <li><a href="/client/account/registry.jsp"><i class="fa fa-pencil-square-o"></i>Đăng ký</a></li>
+                                        <% } else { %>
+                                    <li><a href="/client/account/logout.jsp"><i class="fa fa-pencil-square-o"></i>Đăng xuất</a></li>
+                                        <% }%>
                                 </ul>
                             </div>
                         </div>
@@ -109,7 +113,7 @@
                                     <% if (username != null) {%>
                                     <ul class="list-inline">
                                         <li><a href="#"><i class="fa fa-cart-arrow-down"></i></a></li>
-                                        <li class="chart-li"><a href="/client/cart.jsp">Giỏ hàng</a></li>
+                                        <li class="chart-li"><a href="/client/order/cart.jsp">Giỏ hàng</a></li>
                                         <li><a href="#">${list.getRows()[0].count} sản phẩm</a></li>
                                     </ul>
                                     <% }%>
@@ -139,7 +143,6 @@
                                                 </c:forEach>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Liên hệ</a></li>
                                 </ul>
                             </nav>
                         </div>

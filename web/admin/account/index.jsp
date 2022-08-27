@@ -3,9 +3,12 @@
 <jsp:directive.include file="/admin/sidebar.jsp"></jsp:directive.include>
 <%
     String sql = "";
-    if (request.getParameter("del-id") != null) {
-        String id = request.getParameter("del-id");
-        sql = "delete from the_loai where MaTL = " + id;
+    if (request.getParameter("lock-id") != null) {
+        String id = request.getParameter("lock-id");
+        sql = "update tai_khoan set TrangThai = 0 where TenDN = '" + id + "'";
+    } else if (request.getParameter("unlock-id") != null) {
+        String id = request.getParameter("unlock-id");
+        sql = "update tai_khoan set TrangThai = 1 where TenDN = '" + id + "'";
     }
 %>
 
@@ -39,7 +42,8 @@
                                     <th>Tên đăng nhập</th>
                                     <th>Họ tên</th>
                                     <th>Loại tài khoản</th>
-                                    <th width="118">Công cụ</th>
+                                    <th>Trạng thái</th>
+                                    <th width="67">Công cụ</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -47,10 +51,15 @@
                                 <tr>
                                     <td>${row.TenDN}</td>
                                     <td>${row.HoTen}</td>
-                                    <td>${row.QuyenTC}</td>
+                                    <td>${Helper.Span(row.QuyenTC == 1, "Quản trị viên", "Thành viên")}</td>
+                                    <td>${Helper.Status(row.TrangThai == 1, "Hoạt động", "Khoá")}</td>
                                     <td>
-                                        <a href="/admin/category/edit.jsp?id=${row.MaTL}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Sửa</a>
-                                        <div onclick="RemoveRow('${row.MaTL}')" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Xoá</iv>
+                                        <c:if test="${row.TrangThai == 1}">
+                                            <a href="?lock-id=${row.TenDN}" class="btn btn-danger btn-sm"><i class="fas fa-lock"></i> Khoá</a>
+                                        </c:if>
+                                        <c:if test="${row.TrangThai == 0}">
+                                            <a href="?unlock-id=${row.TenDN}" class="btn btn-primary btn-sm"><i class="fas fa-unlock"></i> Mở</a>
+                                        </c:if>
                                     </td>
                                 </tr>
                             </c:forEach>

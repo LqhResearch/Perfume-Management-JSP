@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2022 at 11:26 AM
+-- Generation Time: Aug 27, 2022 at 03:21 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -123,18 +123,18 @@ INSERT INTO `slider` (`SliderID`, `SliderName`, `Thumbnail`, `Active`) VALUES
 
 CREATE TABLE `tai_khoan` (
   `TenDN` varchar(255) NOT NULL,
-  `MatKhau` varchar(255) NOT NULL,
   `HoTen` varchar(255) NOT NULL,
-  `QuyenTC` int(11) NOT NULL DEFAULT 2
+  `MatKhau` varchar(255) NOT NULL,
+  `QuyenTC` int(11) NOT NULL DEFAULT 2,
+  `TrangThai` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tai_khoan`
 --
 
-INSERT INTO `tai_khoan` (`TenDN`, `MatKhau`, `HoTen`, `QuyenTC`) VALUES
-('admin', '202cb962ac59075b964b07152d234b70', 'LQH', 1),
-('kh1', '202cb962ac59075b964b07152d234b70', 'Khách hàng 1', 2);
+INSERT INTO `tai_khoan` (`TenDN`, `HoTen`, `MatKhau`, `QuyenTC`, `TrangThai`) VALUES
+('admin', 'LQH', '202cb962ac59075b964b07152d234b70', 1, 1);
 
 -- --------------------------------------------------------
 

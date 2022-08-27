@@ -169,7 +169,7 @@ body{
     -ms-appearance: none;
     appearance: none;
     appearance: none;
-    background: #f1f1f1 url("img/c-arow.png") no-repeat scroll 125px center;
+    background: #f1f1f1 url("/template/home/img/c-arow.png") no-repeat scroll 125px center;
     border: medium none;
     cursor: pointer;
     padding: 8px 30px 8px 10px;

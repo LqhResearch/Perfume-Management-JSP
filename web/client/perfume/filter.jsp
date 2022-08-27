@@ -13,7 +13,7 @@
 <div class="breadcurb-area">
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="#">Trang chủ</a></li>
+            <li><a href="/client/index.jsp">Trang chủ</a></li>
             <li>Nước hoa</li>
         </ul>
     </div>
@@ -70,7 +70,9 @@
                                             </a>
                                             <div class="product-item-action">
                                                 <a href="/client/perfume/detail.jsp?id=${row.MaNH}"><i class="fa fa-external-link"></i></a>
+                                                    <% if (username != null) {%>
                                                 <a href="/client/cart.jsp?action=add&id=${row.MaNH}"><i class="fa fa-shopping-cart"></i></a>
+                                                    <% }%>
                                             </div>
                                         </div>
                                         <div class="single-item-content">
@@ -86,7 +88,8 @@
                                         </div>
                                     </div>
                                     <div class="item-action-button fix">
-                                        <a href="/client/cart.jsp?action=add&id=${row.MaNH}"><i class="fa fa-cart-arrow-down"></i>Thêm vào giỏ</a>
+                                        <% String url = username != null ? "/client/cart.jsp?action=add&id=${row.MaNH}" : "#";%>
+                                        <a href="<%=url%>"><i class="fa fa-cart-arrow-down"></i>Thêm vào giỏ</a>
                                         <div class="item-action-icon">
                                             <a href="#"><i class="fa fa-heart"></i></a>
                                             <a href="#"><i class="fa fa-signal"></i></a>

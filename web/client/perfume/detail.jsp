@@ -5,7 +5,7 @@
     <div class="container">
         <ul class="breadcrumb">
             <li><a href="/client/index.jsp">Trang chủ</a></li>
-            <li><a href="#">Nước hoa</a></li>
+            <li><a href="/client/perfume/filter.jsp">Nước hoa</a></li>
             <li>Chi tiết nước hoa</li>
             <li><%=id%></li>
         </ul>
@@ -39,7 +39,9 @@
                         <h3>Mô tả</h3>
                         <div>${res.getRows()[0].MoTa}</div>
 
-                        <a class="btn btn__yellow" href="/client/cart.jsp?action=add&id=${row.MaNH}"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
+                        <% if (username != null) {%>
+                        <a class="btn btn__yellow" href="/client/order/cart.jsp?action=add&id=<%=id%>"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
+                        <% }%>
                     </div>
                 </div>
             </div>

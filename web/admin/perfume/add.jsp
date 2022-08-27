@@ -70,7 +70,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label>Giá</label>
-                        <input type="text" class="form-control" name="price">
+                        <input type="number" class="form-control" name="price">
                     </div>
                     <div class="form-group col-md-6">
                         <label>Hình ảnh</label>

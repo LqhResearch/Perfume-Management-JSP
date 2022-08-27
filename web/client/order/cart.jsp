@@ -2,7 +2,6 @@
 <jsp:directive.include file="/client/header.jsp"></jsp:directive.include>
 
 <%
-    Object username = request.getSession().getAttribute("username");
     String sql = "";
     if (request.getParameter("action") != null && request.getParameter("action").equals("add")) {
         String id = request.getParameter("id");
@@ -76,7 +75,7 @@
                 </div>
                 <div class="cart-button">
                     <a href="/client/index.jsp" class="btn btn__yellow">Tiếp tục mua hàng</a>
-                    <a href="/client/create-order.jsp" class="btn btn__yellow floatright">Tạo đơn hàng</a>
+                    <a href="/client/order/create-order.jsp" class="btn btn__yellow floatright">Tạo đơn hàng</a>
                 </div>
             </div>
         </div>

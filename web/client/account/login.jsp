@@ -7,7 +7,7 @@
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        sql = "select * from tai_khoan where TenDN = '" + username + "' and MatKhau = md5('" + password + "')";
+        sql = "select * from tai_khoan where TenDN = '" + username + "' and MatKhau = md5('" + password + "') and TrangThai = 1";
     }
 %>
 
@@ -28,15 +28,21 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Forms</title>
+        <title>Đăng nhập</title>
+        <link rel="icon" href="/assets/img/favicon.png" />
 
         <link href="/template/login/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/template/login/css/datepicker3.css" rel="stylesheet">
         <link href="/template/login/css/styles.css" rel="stylesheet">
         <style>
             body {
                 height: 100vh;
                 background: center / cover no-repeat url("/assets/slider/s3.jpg");
+            }
+
+            .d-flex-between {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
         </style>
     </head>
@@ -49,17 +55,20 @@
                     <form role="form" method="POST">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Tên đăng nhập" name="username" type="text" autofocus="">
+                                <input class="form-control" placeholder="Tên đăng nhập" name="username" type="text">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Mật khẩu" name="password" type="password" value="">
+                                <input class="form-control" placeholder="Mật khẩu" name="password" type="password">
                             </div>
                             <div class="checkbox">
                                 <label>
                                     <input name="remember" type="checkbox" value="Remember Me">Nhớ mật khẩu
                                 </label>
                             </div>
-                            <button name="submit" value="submit" class="btn btn-primary">Đăng nhập</button>
+                            <div class="d-flex-between">
+                                <button name="submit" value="submit" class="btn btn-primary">Đăng nhập</button>
+                                <a href="/client/account/registry.jsp" class="btn">Đăng ký ngay</a>
+                            </div>
                         </fieldset>
                     </form>
                 </div>
@@ -68,28 +77,6 @@
 
         <script src="/template/login/js/jquery-1.11.1.min.js"></script>
         <script src="/template/login/js/bootstrap.min.js"></script>
-        <script src="/template/login/js/chart.min.js"></script>
-        <script src="/template/login/js/chart-data.js"></script>
-        <script src="/template/login/js/easypiechart.js"></script>
-        <script src="/template/login/js/easypiechart-data.js"></script>
-        <script src="/template/login/js/bootstrap-datepicker.js"></script>
-        <script>
-            !function ($) {
-                $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
-                    $(this).find('em:first').toggleClass("glyphicon-minus");
-                });
-                $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
-            }(window.jQuery);
-
-            $(window).on('resize', function () {
-                if ($(window).width() > 768)
-                    $('#sidebar-collapse').collapse('show')
-            })
-            $(window).on('resize', function () {
-                if ($(window).width() <= 767)
-                    $('#sidebar-collapse').collapse('hide')
-            })
-        </script>	
     </body>
 
 </html>
